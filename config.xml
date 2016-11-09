@@ -1,0 +1,15 @@
+<securityRealm class="hudson.security.LDAPSecurityRealm" plugin="ldap@1.13">
+    <server>ldap://172.19.235.118:389</server>
+    <rootDN>dc=planetexpress,dc=com</rootDN>
+    <inhibitInferRootDN>false</inhibitInferRootDN>
+    <userSearchBase>ou=people</userSearchBase>
+    <userSearch>uid={0}</userSearch>
+    <groupMembershipStrategy class="jenkins.security.plugins.ldap.FromUserRecordLDAPGroupMembershipStrategy"/>
+    <managerDN>cn=admin,dc=planetexpress,dc=com</managerDN>
+    <managerPasswordSecret>/o35DdWro3LV0JMbm0u4ifm3GzBcfLricvB3VfN97n8=</managerPasswordSecret>
+    <disableMailAddressResolver>false</disableMailAddressResolver>
+    <displayNameAttributeName>displayname</displayNameAttributeName>
+    <mailAddressAttributeName>mail</mailAddressAttributeName>
+    <userIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
+    <groupIdStrategy class="jenkins.model.IdStrategy$CaseInsensitive"/>
+  </securityRealm>
